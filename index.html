@@ -337,10 +337,10 @@
             </button>
         
             <h2 class="modal-header">Залиште свої дані, ми вам передзвонимо</h2>
-            <form name="order_form" autocomplete="on" novalidate>
+            <form name="order_form" autocomplete="on" validate>
                 <label for="username" class="">Ім'я</label>
                 <div class="form-field">
-                    <input type="text" name="username" id="username" class="form-input">
+                    <input type="text" name="username" id="username" class="form-input" minlength="2" pattern="[a-zA-Zа-яА-ЯїЇіІ]+" required >
                     <svg class="icon-person" width="12" height="12">
                         <use href="./images/icons.svg#icon-person"></use>
                     </svg>
@@ -348,7 +348,7 @@
             
                 <label for="phone-number">Телефон </label>
                 <div class="form-field">
-                    <input type="tel" name="phone-number" id="phone-number" class="form-input">
+                    <input type="tel" name="phone-number" id="phone-number" class="form-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" required>
                     <svg class="icon-phone-modal" width="13" height="13">
                         <use href="./images/icons.svg#icon-phone-modal"></use>
                     </svg>
@@ -356,7 +356,7 @@
             
                 <label for="email">Пошта</label>
                 <div class="form-field">
-                    <input type="email" name="email" id="email" class="form-input">
+                    <input type="email" name="email" id="email" class="form-input" required>
                     <svg class="icon-envelope-modal" width="15" height="12">
                         <use href="./images/icons.svg#icon-envelope-modal"></use>
                     </svg>
@@ -367,7 +367,7 @@
 
                 <div class="terms">
                     <label for="terms" class="label-terms">
-                        <input type="checkbox" name="terms" id="terms" class="checkbox">
+                        <input type="checkbox" name="terms" id="terms" class="checkbox" required>
                         <span class="check-empty"></span>
                         <svg class="icon-checkbox" width="15" height="15">
                             <use href="./images/icons.svg#icon-checkbox"></use>
